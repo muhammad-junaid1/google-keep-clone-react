@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.note-form {
+  width: 70%;
+}
+
+.note-form input.form-control,
+.note-form textarea.form-control {
+  border: none;
+  outline: none;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+textarea,
+.note-form textarea.form-control {
+  min-height: 30px;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.note-form textarea.form-control {
+  resize: none;
+}
+
+.note-form input.form-control {
+  font-weight: bold;
+  padding: 20px 10px;
+}
+
+.note-card {
+  width: 31%;
+  margin: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.note-card .card-body pre {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.note-card .card-header {
+  background: rgb(248, 248, 248);
+}
+
+.note-card:hover {
+  border: 1px solid rgb(173, 173, 173);
+}
+
+.note-modal {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  margin: 0 auto;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.note-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
+}
+
+.nothing-yet-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
+  opacity: 0.8;
+  font-size: 22px;
+  user-select: none;
+  z-index: -10;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  font-size: 18px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+@media (max-width: 500px) {
+  .note-card {
+    margin: 12px auto;
+    width: 90%;
+  }
+  .logo {
+    margin-left: 15px;
+  }
+  .note-modal {
+    top: 50%;
+    width: 90%;
+  }
+  .note-form {
+    width: 90%;
+  }
+  .note-modal textarea {
+    height: 150px;
+  }
+}
